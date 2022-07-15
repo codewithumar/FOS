@@ -33,12 +33,13 @@ namespace FOS.DL
                 {
                     retDTO.UserID = reader["username"].ToString();
                     retDTO.Role = reader["role"].ToString();
+                    return retDTO;
                 }
-                return retDTO;
+                
             }
             catch(Exception ex)
             {
-
+                throw ex;
             }
             finally
             {

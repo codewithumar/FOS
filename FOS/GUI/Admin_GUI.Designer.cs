@@ -30,11 +30,14 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmb_itemtype = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_itemPrice = new System.Windows.Forms.TextBox();
+            this.txt_itemname = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -51,10 +54,13 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.cmb_itemtype);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txt_itemPrice);
+            this.tabPage1.Controls.Add(this.txt_itemname);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -63,6 +69,69 @@
             this.tabPage1.Text = "Add Item";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(320, 236);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(166, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Item Price";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(166, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Item Type";
+            // 
+            // cmb_itemtype
+            // 
+            this.cmb_itemtype.FormattingEnabled = true;
+            this.cmb_itemtype.Items.AddRange(new object[] {
+            "Desi",
+            "Italian",
+            "Arabic"});
+            this.cmb_itemtype.Location = new System.Drawing.Point(275, 114);
+            this.cmb_itemtype.Name = "cmb_itemtype";
+            this.cmb_itemtype.Size = new System.Drawing.Size(151, 28);
+            this.cmb_itemtype.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(166, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Item Name";
+            // 
+            // txt_itemPrice
+            // 
+            this.txt_itemPrice.Location = new System.Drawing.Point(275, 159);
+            this.txt_itemPrice.Name = "txt_itemPrice";
+            this.txt_itemPrice.Size = new System.Drawing.Size(151, 27);
+            this.txt_itemPrice.TabIndex = 2;
+            // 
+            // txt_itemname
+            // 
+            this.txt_itemname.Location = new System.Drawing.Point(275, 65);
+            this.txt_itemname.Name = "txt_itemname";
+            this.txt_itemname.Size = new System.Drawing.Size(151, 27);
+            this.txt_itemname.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
@@ -70,40 +139,8 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(792, 412);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "View orders";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(275, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 27);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(275, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 27);
-            this.textBox3.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(194, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(275, 114);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 4;
             // 
             // Admin_GUI
             // 
@@ -125,9 +162,12 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private Label label1;
-        private TextBox textBox3;
-        private TextBox textBox1;
+        private TextBox txt_itemPrice;
+        private TextBox txt_itemname;
         private TabPage tabPage2;
-        private ComboBox comboBox1;
+        private ComboBox cmb_itemtype;
+        private Button button1;
+        private Label label3;
+        private Label label2;
     }
 }

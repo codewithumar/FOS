@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using FOS.DTO;
+
 
 namespace FOS.GUI
 {
     public partial class Customer_GUI : Form
     {
+        User_DTO user;
         public Customer_GUI()
         {
             InitializeComponent();
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
