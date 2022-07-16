@@ -28,13 +28,24 @@ namespace FOS.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(!(txt_itemname.Text=="" && txt_itemPrice.Text=="" && cmb_itemtype.Text == ""))
+            if(!(txt_itemname.Text=="" || txt_itemPrice.Text=="" || cmb_itemtype.Text == ""))
             {
                 _additemDTO.Name = txt_itemname.Text;
                 _additemDTO.Price = txt_itemPrice.Text;
                 _additemDTO.Type = cmb_itemtype.Text;
-                _modratorBL.addItemin_BL(_additemDTO);
+                if (_modratorBL.addItemin_BL(_additemDTO))
+                {
+                    MessageBox.Show("Done", "Done", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Error", "Error", MessageBoxButtons.OK);
+                }
 
+            }
+            else
+            {
+                MessageBox.Show("Please Input all feilds", "Error", MessageBoxButtons.OK);
             }
         }
     }

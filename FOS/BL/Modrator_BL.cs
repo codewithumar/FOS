@@ -16,9 +16,9 @@ namespace FOS.BL
         {
             _addfoodDL = new Modrator_DL();
         }
-        public void addItemin_BL(AddItem_DTO additem_dto)
+        public bool addItemin_BL(AddItem_DTO additem_dto)
         {
-            _addfoodDL.addFoodin_DB(additem_dto);
+            return (_addfoodDL.addFoodin_DB(additem_dto));
         }
     }
 }

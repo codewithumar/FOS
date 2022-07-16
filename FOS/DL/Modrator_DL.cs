@@ -17,7 +17,7 @@ namespace FOS.DL
             _dbCon = new DBConnection();
         }
 
-        public void addFoodin_DB(AddItem_DTO aditemDTO)
+        public bool addFoodin_DB(AddItem_DTO aditemDTO)
         {
             try
             {
@@ -29,11 +29,13 @@ namespace FOS.DL
                 com.Parameters.AddWithValue("@Price", aditemDTO.Price);
 
                 int RowEffected= com.ExecuteNonQuery();
+                return false;
                 
             }
             catch (Exception ex)
             {
                 throw ex;
+                return false;
             }
             finally
             {
