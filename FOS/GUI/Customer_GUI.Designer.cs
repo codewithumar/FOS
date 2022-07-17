@@ -35,6 +35,8 @@
             this.lbl_welcome = new System.Windows.Forms.Label();
             this.gdv_menuItems = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_orderitems_temp)).BeginInit();
@@ -80,6 +82,9 @@
             this.gdv_orderitems_temp.AllowUserToAddRows = false;
             this.gdv_orderitems_temp.AllowUserToDeleteRows = false;
             this.gdv_orderitems_temp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdv_orderitems_temp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
             this.gdv_orderitems_temp.Location = new System.Drawing.Point(935, 6);
             this.gdv_orderitems_temp.Name = "gdv_orderitems_temp";
             this.gdv_orderitems_temp.ReadOnly = true;
@@ -124,6 +129,22 @@
             this.tabPage2.Text = "History";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Price";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
             // Customer_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -151,5 +172,7 @@
         private Label lbl_welcome;
         private Button btn_addtoorder;
         private DataGridView gdv_orderitems_temp;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
     }
 }

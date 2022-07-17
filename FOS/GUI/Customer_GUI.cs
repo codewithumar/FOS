@@ -41,14 +41,11 @@ namespace FOS.GUI
         private void btn_addtoorder_Click(object sender, EventArgs e)
         {
 
-            foreach(DataGridViewRow item in gdv_menuItems.Rows)
-            {
+           int n = gdv_orderitems_temp.Rows.Add();
+           gdv_orderitems_temp.Rows[n].Cells[0].Value = gdv_menuItems.CurrentRow.Cells[1].Value.ToString();
+           gdv_orderitems_temp.Rows[n].Cells[1].Value = gdv_menuItems.CurrentRow.Cells[2].Value.ToString();
+
                 
-                int n = gdv_orderitems_temp.Rows.Add();
-                gdv_menuItems.Rows[0].Cells[1].Value = false;
-                gdv_orderitems_temp.Rows[n].Cells[0].Value = item.Cells[1].Value;
-                gdv_orderitems_temp.Rows[n].Cells[1].Value = item.Cells[2].Value;
-            }
         }
 
         private void gdv_menuItems_MouseClick(object sender, MouseEventArgs e)
