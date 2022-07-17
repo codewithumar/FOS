@@ -29,24 +29,26 @@ namespace FOS.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(!(txt_itemname.Text=="" || txt_itemPrice.Text=="" || cmb_itemtype.Text == ""))
+            try
             {
-                _additemDTO.Name = txt_itemname.Text;
-                _additemDTO.Price = txt_itemPrice.Text;
-                _additemDTO.Type = cmb_itemtype.Text;
-                if (_modratorBL.addItemin_BL(_additemDTO))
+                if (!(txt_itemname.Text == "" || txt_itemPrice.Text == "" || cmb_itemtype.Text == ""))
                 {
-                    MessageBox.Show("Done", "Done", MessageBoxButtons.OK);
+                    _additemDTO.Name = txt_itemname.Text;
+                    _additemDTO.Price = txt_itemPrice.Text;
+                    _additemDTO.Type = cmb_itemtype.Text;
+                    if (_modratorBL.addItemin_BL(_additemDTO))
+                    {
+                        MessageBox.Show("Done", "Done", MessageBoxButtons.OK);
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Error", "Error", MessageBoxButtons.OK);
+                    MessageBox.Show("Please Input all feilds", "Error", MessageBoxButtons.OK);
                 }
-
-            }
-            else
+            }catch (Exception ex)
             {
-                MessageBox.Show("Please Input all feilds", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Dish With Same name already Exsists", "Error", MessageBoxButtons.OK);
             }
         }
     }

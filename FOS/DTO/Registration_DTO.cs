@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace FOS.DL
 {
-    class Login_DTO
+    class Registration_DTO
     {
         private string _username;
         private string _password;
         private string _role;
 
-        public Login_DTO()
+        public Registration_DTO()
         {
         }
 

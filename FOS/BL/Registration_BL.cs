@@ -5,16 +5,16 @@ using FOS.GUI;
 
 namespace FOS.BL
 {
-    class Login_BL
+    class Registration_BL
     {
-         Login_DL _lgDL;
+         Registration_DL _lgDL;
 
-        public Login_BL()
+        public Registration_BL()
         {
-            _lgDL = new Login_DL();
+            _lgDL = new Registration_DL();
         }
 
-        public Form VerifyUser(Login_DTO lgDTO)
+        public Form VerifyUser(Registration_DTO lgDTO)
         {
             User_DTO ud = _lgDL.verifyuserfromDb(lgDTO);
             if (ud == null)
@@ -35,6 +35,11 @@ namespace FOS.BL
             }
             return new WrongUser_GUI();
 
+        }
+
+        public bool Signup(User_DTO ud)
+        {
+            return _lgDL.createaccountn_db(ud);
         }
     }
 }

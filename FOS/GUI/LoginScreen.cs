@@ -1,23 +1,50 @@
 using FOS.BL;
 using FOS.DL;
+using FOS.DTO;
 
 namespace FOS
 {
     public partial class LoginScreen : Form
     {
-        private Login_DTO _lgDTO;
-        private Login_BL _lgBL;
+        private Registration_DTO _lgDTO;
+        private Registration_BL _lgBL;
+        private User_DTO ud;
         public LoginScreen()
         {
             InitializeComponent();
-            _lgDTO = new Login_DTO();
-            _lgBL = new Login_BL();
+            _lgDTO = new Registration_DTO();
+            _lgBL = new Registration_BL();
+            ud= new User_DTO();
         }
         private void btn_login_Click(object sender, EventArgs e)
         {
             _lgDTO.Username=txt_username.Text;
             _lgDTO.Password = txt_password.Text;
             _lgBL.VerifyUser(_lgDTO).ShowDialog();
+        }
+
+        private void btn_signup_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!(txt_signupusername.Text == "" || txt_signuppassword.Text == "")) { 
+                ud.UserID = txt_signupusername.Text;
+                ud.Password = txt_signuppassword.Text;
+
+                if (_lgBL.Signup(ud))
+                {
+                    MessageBox.Show("Account Created success!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                    }
+                else
+                {
+                    MessageBox.Show("Please input All fields!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Account with this userID Already exsits!!! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
