@@ -25,5 +25,9 @@ namespace FOS.BL
         {
             return _modratorDL.getMenuItemsfrom_db();
         }
+        public bool addtotalbillInBL(GenrateOrderBill_DTO gob_dto)
+        {
+            return _modratorDL.addtotalbillInDB(gob_dto);
+        }
     }
 }

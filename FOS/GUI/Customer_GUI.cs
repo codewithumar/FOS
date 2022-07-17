@@ -8,13 +8,15 @@ namespace FOS.GUI
     {
         Modrator_BL _modratorBL;
         User_DTO user;
+        GenrateOrderBill_DTO genrateorderbill;
+        AddItem_DTO additem;
         private int _totalPrice=0;
         public Customer_GUI(User_DTO ud)
         {
             InitializeComponent();
             user = ud;
             _modratorBL=new Modrator_BL();
-            
+            genrateorderbill = new GenrateOrderBill_DTO(); 
         }
 
         private void Customer_GUI_Load(object sender, EventArgs e)
@@ -65,6 +67,15 @@ namespace FOS.GUI
                 txt_totalBill.Text = _totalPrice.ToString();
                 gdv_orderitems_temp.Rows.Remove(gdv_orderitems_temp.CurrentRow);
             }
+        }
+
+        private void btn_Calculatebill_Click(object sender, EventArgs e)
+        {
+            genrateorderbill.Totalbill = _totalPrice.ToString();
+            genrateorderbill.Username = user.UserID;
+            genrateorderbill.Quantity = 5.ToString();
+            genrateorderbill.ItemName = "test";
+
         }
     }
 }

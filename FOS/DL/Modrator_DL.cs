@@ -67,5 +67,33 @@ namespace FOS.DL
                 _dbCon.Con.Close();
             }
         }
+        public bool addtotalbillInDB(GenrateOrderBill_DTO gob_dto)
+        {
+            try
+            {
+                _dbCon.Con.Open();
+                string queryString = "INSERT INTO Order VALUES(username,ItemName,TotalPrice,status,Quantity) SELECT @TypeName ,@TotalPrice, @status, @Quantity, (SELECT username FROM myUser WHERE username=@username);";
+                SqlCommand com = new SqlCommand(queryString, _dbCon.Con);
+                com.Parameters.AddWithValue("@TypeName", gob_dto.ItemName);
+                com.Parameters.AddWithValue("@status", gob_dto.Status);
+                com.Parameters.AddWithValue("@quantity", gob_dto.Quantity);
+                com.Parameters.AddWithValue("@bill", gob_dto.Totalbill);
+                com.Parameters.AddWithValue("@username", gob_dto.Username);
+
+
+                int RowEffected = com.ExecuteNonQuery();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+                return false;
+            }
+            finally
+            {
+                _dbCon.Con.Close();
+            }
+        }
     }
 }
