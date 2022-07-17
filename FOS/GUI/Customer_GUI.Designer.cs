@@ -35,16 +35,16 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_Calculatebill = new System.Windows.Forms.Button();
             this.btn_addtoorder = new System.Windows.Forms.Button();
-            this.gdv_orderitems_temp = new System.Windows.Forms.DataGridView();
             this.lbl_welcome = new System.Windows.Forms.Label();
             this.gdv_menuItems = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gdv_orderitems_temp = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdv_orderitems_temp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_menuItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdv_orderitems_temp)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -120,22 +120,6 @@
             this.btn_addtoorder.UseVisualStyleBackColor = true;
             this.btn_addtoorder.Click += new System.EventHandler(this.btn_addtoorder_Click);
             // 
-            // gdv_orderitems_temp
-            // 
-            this.gdv_orderitems_temp.AllowUserToAddRows = false;
-            this.gdv_orderitems_temp.AllowUserToDeleteRows = false;
-            this.gdv_orderitems_temp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdv_orderitems_temp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3});
-            this.gdv_orderitems_temp.Location = new System.Drawing.Point(436, 3);
-            this.gdv_orderitems_temp.Name = "gdv_orderitems_temp";
-            this.gdv_orderitems_temp.ReadOnly = true;
-            this.gdv_orderitems_temp.RowHeadersWidth = 51;
-            this.gdv_orderitems_temp.RowTemplate.Height = 29;
-            this.gdv_orderitems_temp.Size = new System.Drawing.Size(428, 308);
-            this.gdv_orderitems_temp.TabIndex = 2;
-            // 
             // lbl_welcome
             // 
             this.lbl_welcome.AutoSize = true;
@@ -160,7 +144,6 @@
             this.gdv_menuItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gdv_menuItems.Size = new System.Drawing.Size(424, 521);
             this.gdv_menuItems.TabIndex = 0;
-            this.gdv_menuItems.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gdv_menuItems_MouseClick);
             // 
             // tabPage2
             // 
@@ -172,21 +155,37 @@
             this.tabPage2.Text = "History";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Column2
+            // Column6
             // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.Column6.HeaderText = "Price";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 125;
             // 
-            // Column3
+            // Column5
             // 
-            this.Column3.HeaderText = "Price";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
+            this.Column5.HeaderText = "Name";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
+            // 
+            // gdv_orderitems_temp
+            // 
+            this.gdv_orderitems_temp.AllowUserToAddRows = false;
+            this.gdv_orderitems_temp.AllowUserToDeleteRows = false;
+            this.gdv_orderitems_temp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdv_orderitems_temp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.Column6});
+            this.gdv_orderitems_temp.Location = new System.Drawing.Point(436, 3);
+            this.gdv_orderitems_temp.Name = "gdv_orderitems_temp";
+            this.gdv_orderitems_temp.ReadOnly = true;
+            this.gdv_orderitems_temp.RowHeadersWidth = 51;
+            this.gdv_orderitems_temp.RowTemplate.Height = 29;
+            this.gdv_orderitems_temp.Size = new System.Drawing.Size(428, 308);
+            this.gdv_orderitems_temp.TabIndex = 2;
             // 
             // Customer_GUI
             // 
@@ -201,8 +200,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdv_orderitems_temp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_menuItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdv_orderitems_temp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,13 +214,13 @@
         private DataGridView gdv_menuItems;
         private Label lbl_welcome;
         private Button btn_addtoorder;
-        private DataGridView gdv_orderitems_temp;
         private Button btn_delete;
         private Button btn_Calculatebill;
         private Label label1;
         private TextBox txt_totalBill;
         private DataGridViewCheckBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
+        private DataGridView gdv_orderitems_temp;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
     }
 }

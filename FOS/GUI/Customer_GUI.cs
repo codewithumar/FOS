@@ -42,8 +42,8 @@ namespace FOS.GUI
         private void btn_addtoorder_Click(object sender, EventArgs e)
         {
             int n = gdv_orderitems_temp.Rows.Add();
-            gdv_orderitems_temp.Rows[n].Cells[1].Value = gdv_menuItems.CurrentRow.Cells[0].Value.ToString();
-            gdv_orderitems_temp.Rows[n].Cells[2].Value = gdv_menuItems.CurrentRow.Cells[1].Value.ToString();
+            gdv_orderitems_temp.Rows[n].Cells[0].Value = gdv_menuItems.CurrentRow.Cells[1].Value.ToString();
+            gdv_orderitems_temp.Rows[n].Cells[1].Value = gdv_menuItems.CurrentRow.Cells[2].Value.ToString();
             _totalPrice += Convert.ToInt32(gdv_menuItems.CurrentRow.Cells[2].Value.ToString());
             txt_totalBill.Text = _totalPrice.ToString();
             gdv_orderitems_temp.ClearSelection();
@@ -51,20 +51,7 @@ namespace FOS.GUI
 
                 
         }
-
-        private void gdv_menuItems_MouseClick(object sender, MouseEventArgs e)
-        {
-           /*if ((bool)gdv_menuItems.SelectedRows[0].Cells[0].Value == false)
-            {
-                gdv_menuItems.SelectedRows[0].Cells[0].Value = true;
-            }
-            else
-            {
-                gdv_menuItems.SelectedRows[0].Cells[0].Value = false;
-            }*/
-        }
-
-        private void btn_delete_Click(object sender, EventArgs e)
+       private void btn_delete_Click(object sender, EventArgs e)
         {
             
             if (gdv_orderitems_temp.RowCount.Equals(0))

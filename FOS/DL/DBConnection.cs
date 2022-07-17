@@ -17,7 +17,7 @@ namespace FOS.DL
             string Path = Environment.CurrentDirectory;
             string[] appPath = Path.Split(new string[] { "bin" }, StringSplitOptions.None);
             AppDomain.CurrentDomain.SetData("DataDirectory", appPath[0]);
-            string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath[0] + @"FOS_Database.mdf;Integrated Security=True";
+            string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + appPath[0] + @"FOS_Database2.mdf;Integrated Security=True";
             Con = new SqlConnection(conString);
 
         }
