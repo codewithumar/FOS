@@ -45,21 +45,21 @@ namespace FOS.GUI
             {
                 
                 int n = gdv_orderitems_temp.Rows.Add();
-                gdv_menuItems.CurrentRow.Cells[1].Value = false;
-                gdv_orderitems_temp.Rows[n].Cells[1].Value = item.Cells[1].Value;
-                gdv_orderitems_temp.Rows[n].Cells[2].Value = item.Cells[2].Value;
+                gdv_menuItems.Rows[0].Cells[1].Value = false;
+                gdv_orderitems_temp.Rows[n].Cells[0].Value = item.Cells[1].Value;
+                gdv_orderitems_temp.Rows[n].Cells[1].Value = item.Cells[2].Value;
             }
         }
 
         private void gdv_menuItems_MouseClick(object sender, MouseEventArgs e)
         {
-           /* if ((bool)gdv_menuItems.SelectedRows[1].Cells["Column1"].Value == false)
+           /*if ((bool)gdv_menuItems.SelectedRows[0].Cells[0].Value == false)
             {
-                gdv_menuItems.SelectedRows[1].Cells["Column1"].Value = true;
+                gdv_menuItems.SelectedRows[0].Cells[0].Value = true;
             }
             else
             {
-                gdv_menuItems.SelectedRows[1].Cells["Column1"].Value = false;
+                gdv_menuItems.SelectedRows[0].Cells[0].Value = false;
             }*/
         }
     }
