@@ -1,6 +1,7 @@
 ﻿using FOS.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -29,13 +30,37 @@ namespace FOS.DL
                 com.Parameters.AddWithValue("@Price", aditemDTO.Price);
 
                 int RowEffected= com.ExecuteNonQuery();
-                return false;
+                return true;
                 
             }
             catch (Exception ex)
             {
                 throw ex;
                 return false;
+            }
+            finally
+            {
+                _dbCon.Con.Close();
+            }
+        }
+        public DataTable getMenuItemsfrom_db ()
+        {
+            DataTable dt = new DataTable();
+            
+            try
+            {
+                _dbCon.Con.Open();
+                string queryString = "SELECT TypeName,Name,Price FROM MenuItem;";
+                SqlCommand com = new SqlCommand(queryString, _dbCon.Con);
+                SqlDataReader reader = com.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+                
             }
             finally
             {

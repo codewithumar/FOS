@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FOS.DTO
 {
-     class User_DTO
+     public class User_DTO
     {
         private string _userID;
         private string _name;

@@ -23,11 +23,11 @@ namespace FOS.BL
             }
             if (ud.Role=="admin")
             {
-                return new Admin_GUI();
+                return new Admin_GUI(ud);
             }
             else if (ud.Role=="Customer")
             {
-                return new Customer_GUI();
+                return new Customer_GUI(ud);
             }
             else
             {

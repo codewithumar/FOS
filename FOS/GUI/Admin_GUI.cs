@@ -17,12 +17,13 @@ namespace FOS.GUI
         Modrator_BL _modratorBL;
         AddItem_DTO _additemDTO;
         User_DTO userDTO;
-        public Admin_GUI()
+        public Admin_GUI(User_DTO ud)
         {
             InitializeComponent();
             
             _additemDTO = new AddItem_DTO();
             _modratorBL = new Modrator_BL();
+            userDTO = ud;   
             
         }
 
