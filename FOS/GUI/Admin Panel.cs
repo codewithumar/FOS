@@ -59,7 +59,7 @@ namespace FOS.GUI
 
         private void Admin_GUI_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(800, 500);
+            this.Size = new Size(1400, 600);
             try
             {
 
@@ -156,6 +156,14 @@ namespace FOS.GUI
             }
         }
 
-       
+        private void txt_updateitemtype_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace FOS.GUI
 
         private void Customer_GUI_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(800, 500);
+            this.Size = new Size(994, 569);
             try
             {
                 

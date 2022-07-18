@@ -148,7 +148,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(661, 325);
+            this.tabPage2.Size = new System.Drawing.Size(507, 324);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "SignUP";
             // 
@@ -156,7 +156,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(78, 19);
+            this.label6.Location = new System.Drawing.Point(15, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(480, 47);
             this.label6.TabIndex = 5;
@@ -166,7 +166,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(176, 173);
+            this.label5.Location = new System.Drawing.Point(100, 172);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 4;
@@ -176,7 +176,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(176, 120);
+            this.label4.Location = new System.Drawing.Point(100, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 3;
@@ -184,7 +184,7 @@
             // 
             // txt_signuppassword
             // 
-            this.txt_signuppassword.Location = new System.Drawing.Point(269, 168);
+            this.txt_signuppassword.Location = new System.Drawing.Point(193, 167);
             this.txt_signuppassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_signuppassword.Name = "txt_signuppassword";
             this.txt_signuppassword.PasswordChar = '*';
@@ -193,7 +193,7 @@
             // 
             // txt_signupusername
             // 
-            this.txt_signupusername.Location = new System.Drawing.Point(269, 118);
+            this.txt_signupusername.Location = new System.Drawing.Point(193, 117);
             this.txt_signupusername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_signupusername.Name = "txt_signupusername";
             this.txt_signupusername.Size = new System.Drawing.Size(176, 23);
@@ -202,7 +202,7 @@
             // btn_signup
             // 
             this.btn_signup.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_signup.Location = new System.Drawing.Point(354, 204);
+            this.btn_signup.Location = new System.Drawing.Point(278, 203);
             this.btn_signup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_signup.Name = "btn_signup";
             this.btn_signup.Size = new System.Drawing.Size(91, 32);

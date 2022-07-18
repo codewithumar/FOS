@@ -34,6 +34,9 @@ namespace FOS
                 if (_lgBL.Signup(ud))
                 {
                     MessageBox.Show("Account Created success!", "Notify!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_signupusername.Clear();
+                        txt_signuppassword.Clear();
+                        txt_signupusername.Focus();
                 }
                     }
                 else
