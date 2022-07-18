@@ -7,6 +7,7 @@ namespace FOS.GUI
     public partial class Customer_GUI : Form
     {
         Modrator_BL _modratorBL;
+        string _orderItemnames;
         User_DTO user;
         GenrateOrderBill_DTO genrateorderbill;
         AddItem_DTO additem;
@@ -47,7 +48,9 @@ namespace FOS.GUI
             gdv_orderitems_temp.Rows[n].Cells[0].Value = gdv_menuItems.CurrentRow.Cells[1].Value.ToString();
             gdv_orderitems_temp.Rows[n].Cells[1].Value = gdv_menuItems.CurrentRow.Cells[2].Value.ToString();
             _totalPrice += Convert.ToInt32(gdv_menuItems.CurrentRow.Cells[2].Value.ToString());
+            //_orderItemnames =_orderItemnames+ gdv_menuItems.CurrentRow.Cells[1].Value.ToString();
             txt_totalBill.Text = _totalPrice.ToString();
+            //txt_totalBill.Text = _orderItemnames;
             gdv_orderitems_temp.ClearSelection();
 
 
@@ -73,8 +76,19 @@ namespace FOS.GUI
         {
             genrateorderbill.Totalbill = _totalPrice.ToString();
             genrateorderbill.Username = user.UserID;
-            genrateorderbill.Quantity = 5.ToString();
             genrateorderbill.ItemName = "test";
+            genrateorderbill.Status = "Pending";
+            try
+            {
+                if (_modratorBL.addtotalbillInBL(genrateorderbill))
+                {
+                    MessageBox.Show("Success","sucess",MessageBoxButtons.OK);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("No Items Available" + ex.Message);
+            }
 
         }
     }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -49,6 +50,20 @@ namespace FOS.GUI
             }catch (Exception ex)
             {
                 MessageBox.Show("Dish With Same name already Exsists", "Error", MessageBoxButtons.OK);
+            }
+        }
+
+        private void Admin_GUI_Load(object sender, EventArgs e)
+        {
+            this.Size = new Size(800, 500);
+            try
+            {
+
+                gdv_orderlist.DataSource = _modratorBL.getorderlistINBL();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("No Items Available" + ex.Message);
             }
         }
     }
