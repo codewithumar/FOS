@@ -38,11 +38,19 @@
             this.txt_itemPrice = new System.Windows.Forms.TextBox();
             this.txt_itemname = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+<<<<<<< HEAD
             this.gdv_orderlist = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_orderlist)).BeginInit();
+=======
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+>>>>>>> a9fb7f9c9bc7620c58d569fbf65e2f6e0564eb70
             this.SuspendLayout();
             // 
             // tabControl1
@@ -143,9 +151,14 @@
             // 
             // tabPage2
             // 
+<<<<<<< HEAD
             this.tabPage2.Controls.Add(this.gdv_orderlist);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+>>>>>>> a9fb7f9c9bc7620c58d569fbf65e2f6e0564eb70
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Size = new System.Drawing.Size(1247, 472);
@@ -153,6 +166,7 @@
             this.tabPage2.Text = "View orders";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // gdv_orderlist
             // 
             this.gdv_orderlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -163,6 +177,17 @@
             this.gdv_orderlist.RowTemplate.Height = 29;
             this.gdv_orderlist.Size = new System.Drawing.Size(1242, 254);
             this.gdv_orderlist.TabIndex = 0;
+=======
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(586, 406);
+            this.dataGridView1.TabIndex = 0;
+>>>>>>> a9fb7f9c9bc7620c58d569fbf65e2f6e0564eb70
             // 
             // Admin_GUI
             // 
@@ -178,7 +203,11 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.gdv_orderlist)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+>>>>>>> a9fb7f9c9bc7620c58d569fbf65e2f6e0564eb70
             this.ResumeLayout(false);
 
         }
@@ -195,6 +224,10 @@
         private Button button1;
         private Label label3;
         private Label label2;
+<<<<<<< HEAD
         private DataGridView gdv_orderlist;
+=======
+        private DataGridView dataGridView1;
+>>>>>>> a9fb7f9c9bc7620c58d569fbf65e2f6e0564eb70
     }
 }
