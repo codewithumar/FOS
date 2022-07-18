@@ -190,5 +190,31 @@ namespace FOS.DL
                 _dbCon.Con.Close();
             }
         }
+
+        public DataTable gethistoryin_DL(string userid)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                _dbCon.Con.Open();
+                string queryString = "SELECT * FROM Order_items WHERE username = @userid;";
+                SqlCommand com = new SqlCommand(queryString, _dbCon.Con);
+                com.Parameters.AddWithValue("@userid", userid);
+                SqlDataReader reader = com.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+            finally
+            {
+                _dbCon.Con.Close();
+            }
+        }
     }
 }

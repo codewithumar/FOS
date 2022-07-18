@@ -41,10 +41,13 @@
             this.lbl_welcome = new System.Windows.Forms.Label();
             this.gdv_menuItems = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.gdv_history = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_orderitems_temp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_menuItems)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gdv_history)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -180,19 +183,30 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.gdv_history);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1373, 692);
+            this.tabPage2.Size = new System.Drawing.Size(1608, 849);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "History";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // gdv_history
+            // 
+            this.gdv_history.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdv_history.Location = new System.Drawing.Point(0, 0);
+            this.gdv_history.Name = "gdv_history";
+            this.gdv_history.RowHeadersWidth = 51;
+            this.gdv_history.RowTemplate.Height = 29;
+            this.gdv_history.Size = new System.Drawing.Size(1207, 689);
+            this.gdv_history.TabIndex = 0;
             // 
             // Customer_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1615, 886);
+            this.ClientSize = new System.Drawing.Size(1223, 721);
             this.Controls.Add(this.tabControl1);
             this.Name = "Customer_GUI";
             this.Text = "Customer_GUI";
@@ -203,6 +217,8 @@
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_orderitems_temp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_menuItems)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gdv_history)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +239,6 @@
         private DataGridView gdv_orderitems_temp;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
+        private DataGridView gdv_history;
     }
 }

@@ -45,5 +45,9 @@ namespace FOS.BL
         {
             return _modratorDL.checkItem(text);
         }
+        public DataTable gethistoryfrom_Db(string userid)
+        {
+            return _modratorDL.gethistoryin_DL(userid);
+        }
     }
 }

@@ -27,8 +27,9 @@ namespace FOS.GUI
             {
                 
                 gdv_menuItems.DataSource = _modratorBL.getMenuitems_BL();
-                
                 lbl_welcome.Text += user.UserID;
+                gdv_history.DataSource = _modratorBL.gethistoryfrom_Db(user.UserID.ToString());
+
             }
             catch (SqlException ex)
             {
@@ -48,7 +49,7 @@ namespace FOS.GUI
             gdv_orderitems_temp.Rows[n].Cells[0].Value = gdv_menuItems.CurrentRow.Cells[1].Value.ToString();
             gdv_orderitems_temp.Rows[n].Cells[1].Value = gdv_menuItems.CurrentRow.Cells[2].Value.ToString();
             _totalPrice += Convert.ToInt32(gdv_menuItems.CurrentRow.Cells[2].Value.ToString());
-            //_orderItemnames =_orderItemnames+ gdv_menuItems.CurrentRow.Cells[1].Value.ToString();
+            _orderItemnames =_orderItemnames+ gdv_menuItems.CurrentRow.Cells[1].Value.ToString() + ","; ;
             txt_totalBill.Text = _totalPrice.ToString();
             //txt_totalBill.Text = _orderItemnames;
             gdv_orderitems_temp.ClearSelection();
@@ -76,8 +77,8 @@ namespace FOS.GUI
         {
             genrateorderbill.Totalbill = _totalPrice.ToString();
             genrateorderbill.Username = user.UserID;
-            genrateorderbill.ItemName = "test";
-            genrateorderbill.Status = "Pending";
+            genrateorderbill.ItemName = _orderItemnames;
+            genrateorderbill.Status = "Confirm";
             try
             {
                 if (_modratorBL.addtotalbillInBL(genrateorderbill))
