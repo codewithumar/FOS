@@ -21,6 +21,7 @@ namespace FOS
             _lgDTO.Username=txt_username.Text;
             _lgDTO.Password = txt_password.Text;
             _lgBL.VerifyUser(_lgDTO).ShowDialog();
+            txt_password.Clear();
         }
 
         private void btn_signup_Click(object sender, EventArgs e)
