@@ -124,7 +124,7 @@ namespace FOS.DL
                 _dbCon.Con.Open();
                 string queryString = "Delete FROM MenuItem WHERE Name=@name;";
                 SqlCommand com = new SqlCommand(queryString, _dbCon.Con);
-                com.Parameters.AddWithValue("@name", del_dto.Name);
+                com.Parameters.AddWithValue("@name", del_dto.Name.ToString());
                 int noOfRowsAffected = com.ExecuteNonQuery();
 
             }

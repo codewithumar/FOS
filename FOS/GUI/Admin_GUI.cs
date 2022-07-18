@@ -114,5 +114,50 @@ namespace FOS.GUI
 
             }
         }
+
+        private void btn_searchfordelete_Click(object sender, EventArgs e)
+        {
+            if (!(txt_itemnametodelete.Text == ""))
+            {
+                try
+                {
+                    _additemDTO = _modratorBL.checkItem(txt_itemnametodelete.Text);
+                    if (_additemDTO != null)
+                    {
+                        txt_itemnametodelete.Text = _additemDTO.Name;
+                        txt_itemtypetodelete.Text = _additemDTO.Type;
+                        txt_itempricetodelete.Text = _additemDTO.Price;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Record not found");
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Record not found due to exception");
+                }
+
+            }
+        }
+
+        private void btn_deleteItem_Click(object sender, EventArgs e)
+        {
+            Item_DTO itemDTO = new Item_DTO();
+            if (!(txt_itemnametodelete.Text == ""))
+            {
+                itemDTO.Name = txt_itemnametodelete.Text.ToString();
+                try
+                {
+                    _modratorBL.deleteiteminBL(itemDTO);
+                    MessageBox.Show("Deleted", "Info", MessageBoxButtons.OK);
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Record not update due to exception");
+                }
+            }
+        }
     }
 }
