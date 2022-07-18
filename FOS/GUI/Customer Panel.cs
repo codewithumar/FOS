@@ -10,7 +10,6 @@ namespace FOS.GUI
         string _orderItemnames;
         User_DTO user;
         GenrateOrderBill_DTO genrateorderbill;
-        Item_DTO additem;
         private int _totalPrice=0;
         public Customer_GUI(User_DTO ud)
         {
@@ -33,7 +32,7 @@ namespace FOS.GUI
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("No Items Available"+ex.Message);
+                MessageBox.Show("No Menu Items are Available due to "+ex.Message);
             }
             
         }
@@ -49,7 +48,7 @@ namespace FOS.GUI
             gdv_orderitems_temp.Rows[n].Cells[0].Value = gdv_menuItems.CurrentRow.Cells[1].Value.ToString();
             gdv_orderitems_temp.Rows[n].Cells[1].Value = gdv_menuItems.CurrentRow.Cells[2].Value.ToString();
             _totalPrice += Convert.ToInt32(gdv_menuItems.CurrentRow.Cells[2].Value.ToString());
-            _orderItemnames =_orderItemnames+ gdv_menuItems.CurrentRow.Cells[1].Value.ToString() + ","; ;
+            _orderItemnames =_orderItemnames+ gdv_menuItems.CurrentRow.Cells[1].Value.ToString() + ", "; ;
             txt_totalBill.Text = _totalPrice.ToString();
             //txt_totalBill.Text = _orderItemnames;
             gdv_orderitems_temp.ClearSelection();
@@ -83,12 +82,12 @@ namespace FOS.GUI
             {
                 if (_modratorBL.addtotalbillInBL(genrateorderbill))
                 {
-                    MessageBox.Show("Success","sucess",MessageBoxButtons.OK);
+                    MessageBox.Show("Your total bill is: "+_totalPrice.ToString()+". Your items are: "+_orderItemnames,"Notify",MessageBoxButtons.OK);
                 }
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("No Items Available" + ex.Message);
+                MessageBox.Show("No Items Available due to " + ex.Message);
             }
 
         }

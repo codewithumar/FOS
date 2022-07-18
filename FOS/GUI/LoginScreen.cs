@@ -33,18 +33,23 @@ namespace FOS
 
                 if (_lgBL.Signup(ud))
                 {
-                    MessageBox.Show("Account Created success!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Account Created success!", "Notify!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                     }
                 else
                 {
-                    MessageBox.Show("Please input All fields!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please input All fields!!!", "Warning!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Account with this userID Already exsits!!! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void LoginScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -33,9 +33,9 @@
             this.btn_add = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmb_itemtype = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_itemPrice = new System.Windows.Forms.TextBox();
+            this.txt_itemtype = new System.Windows.Forms.TextBox();
             this.txt_itemname = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gdv_orderlist = new System.Windows.Forms.DataGridView();
@@ -71,10 +71,11 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(1, 3);
+            this.tabControl1.Location = new System.Drawing.Point(1, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1434, 667);
+            this.tabControl1.Size = new System.Drawing.Size(1203, 500);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -82,88 +83,89 @@
             this.tabPage1.Controls.Add(this.btn_add);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.cmb_itemtype);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.txt_itemPrice);
+            this.tabPage1.Controls.Add(this.txt_itemtype);
             this.tabPage1.Controls.Add(this.txt_itemname);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1426, 634);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(1195, 472);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Item";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(320, 236);
+            this.btn_add.Location = new System.Drawing.Point(320, 173);
+            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(94, 29);
+            this.btn_add.Size = new System.Drawing.Size(82, 22);
             this.btn_add.TabIndex = 7;
-            this.btn_add.Text = "Add";
+            this.btn_add.Text = "Add Item";
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(166, 165);
+            this.label3.Location = new System.Drawing.Point(145, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 20);
+            this.label3.Size = new System.Drawing.Size(60, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Item Price";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(166, 123);
+            this.label2.Location = new System.Drawing.Point(145, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "Item Type";
-            // 
-            // cmb_itemtype
-            // 
-            this.cmb_itemtype.FormattingEnabled = true;
-            this.cmb_itemtype.Items.AddRange(new object[] {
-            "Desi",
-            "Italian",
-            "Arabic"});
-            this.cmb_itemtype.Location = new System.Drawing.Point(275, 115);
-            this.cmb_itemtype.Name = "cmb_itemtype";
-            this.cmb_itemtype.Size = new System.Drawing.Size(183, 28);
-            this.cmb_itemtype.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(166, 68);
+            this.label1.Location = new System.Drawing.Point(145, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Item Name";
             // 
             // txt_itemPrice
             // 
-            this.txt_itemPrice.Location = new System.Drawing.Point(275, 159);
+            this.txt_itemPrice.Location = new System.Drawing.Point(241, 119);
+            this.txt_itemPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_itemPrice.Name = "txt_itemPrice";
-            this.txt_itemPrice.Size = new System.Drawing.Size(183, 27);
+            this.txt_itemPrice.Size = new System.Drawing.Size(161, 23);
             this.txt_itemPrice.TabIndex = 2;
+            // 
+            // txt_itemtype
+            // 
+            this.txt_itemtype.Location = new System.Drawing.Point(241, 84);
+            this.txt_itemtype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_itemtype.Name = "txt_itemtype";
+            this.txt_itemtype.Size = new System.Drawing.Size(161, 23);
+            this.txt_itemtype.TabIndex = 0;
             // 
             // txt_itemname
             // 
-            this.txt_itemname.Location = new System.Drawing.Point(275, 65);
+            this.txt_itemname.Location = new System.Drawing.Point(241, 49);
+            this.txt_itemname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_itemname.Name = "txt_itemname";
-            this.txt_itemname.Size = new System.Drawing.Size(183, 27);
+            this.txt_itemname.Size = new System.Drawing.Size(161, 23);
             this.txt_itemname.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.gdv_orderlist);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1426, 634);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(1195, 472);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "View orders";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -171,11 +173,12 @@
             // gdv_orderlist
             // 
             this.gdv_orderlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdv_orderlist.Location = new System.Drawing.Point(2, 3);
+            this.gdv_orderlist.Location = new System.Drawing.Point(2, 2);
+            this.gdv_orderlist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gdv_orderlist.Name = "gdv_orderlist";
             this.gdv_orderlist.RowHeadersWidth = 51;
             this.gdv_orderlist.RowTemplate.Height = 29;
-            this.gdv_orderlist.Size = new System.Drawing.Size(1419, 339);
+            this.gdv_orderlist.Size = new System.Drawing.Size(1242, 254);
             this.gdv_orderlist.TabIndex = 0;
             // 
             // tabPage3
@@ -188,26 +191,29 @@
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.txt_updateprice);
             this.tabPage3.Controls.Add(this.txt_updtitemname);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1426, 634);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(1195, 472);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Update Items";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // txt_updateitemtype
             // 
-            this.txt_updateitemtype.Location = new System.Drawing.Point(424, 172);
+            this.txt_updateitemtype.Location = new System.Drawing.Point(371, 129);
+            this.txt_updateitemtype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_updateitemtype.Name = "txt_updateitemtype";
-            this.txt_updateitemtype.Size = new System.Drawing.Size(154, 27);
+            this.txt_updateitemtype.Size = new System.Drawing.Size(135, 23);
             this.txt_updateitemtype.TabIndex = 15;
             // 
             // btn_serach
             // 
-            this.btn_serach.Location = new System.Drawing.Point(634, 123);
+            this.btn_serach.Location = new System.Drawing.Point(555, 92);
+            this.btn_serach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_serach.Name = "btn_serach";
-            this.btn_serach.Size = new System.Drawing.Size(94, 29);
+            this.btn_serach.Size = new System.Drawing.Size(82, 22);
             this.btn_serach.TabIndex = 14;
             this.btn_serach.Text = "Search";
             this.btn_serach.UseVisualStyleBackColor = true;
@@ -215,9 +221,10 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(473, 292);
+            this.btn_update.Location = new System.Drawing.Point(414, 219);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(94, 29);
+            this.btn_update.Size = new System.Drawing.Size(82, 22);
             this.btn_update.TabIndex = 14;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
@@ -226,42 +233,44 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(285, 222);
+            this.label4.Location = new System.Drawing.Point(249, 166);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 20);
+            this.label4.Size = new System.Drawing.Size(101, 15);
             this.label4.TabIndex = 13;
             this.label4.Text = "Update Item Price";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(286, 179);
+            this.label5.Location = new System.Drawing.Point(250, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 20);
+            this.label5.Size = new System.Drawing.Size(99, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "Update Item Type";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(285, 124);
+            this.label6.Location = new System.Drawing.Point(249, 93);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 20);
+            this.label6.Size = new System.Drawing.Size(107, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "Update Item Name";
             // 
             // txt_updateprice
             // 
-            this.txt_updateprice.Location = new System.Drawing.Point(427, 215);
+            this.txt_updateprice.Location = new System.Drawing.Point(374, 161);
+            this.txt_updateprice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_updateprice.Name = "txt_updateprice";
-            this.txt_updateprice.Size = new System.Drawing.Size(151, 27);
+            this.txt_updateprice.Size = new System.Drawing.Size(133, 23);
             this.txt_updateprice.TabIndex = 9;
             // 
             // txt_updtitemname
             // 
-            this.txt_updtitemname.Location = new System.Drawing.Point(427, 121);
+            this.txt_updtitemname.Location = new System.Drawing.Point(374, 91);
+            this.txt_updtitemname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_updtitemname.Name = "txt_updtitemname";
-            this.txt_updtitemname.Size = new System.Drawing.Size(151, 27);
+            this.txt_updtitemname.Size = new System.Drawing.Size(133, 23);
             this.txt_updtitemname.TabIndex = 8;
             // 
             // tabPage4
@@ -274,9 +283,10 @@
             this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.txt_itempricetodelete);
             this.tabPage4.Controls.Add(this.txt_itemnametodelete);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1426, 634);
+            this.tabPage4.Size = new System.Drawing.Size(1195, 472);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Delete items";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -284,16 +294,18 @@
             // txt_itemtypetodelete
             // 
             this.txt_itemtypetodelete.Enabled = false;
-            this.txt_itemtypetodelete.Location = new System.Drawing.Point(479, 215);
+            this.txt_itemtypetodelete.Location = new System.Drawing.Point(419, 161);
+            this.txt_itemtypetodelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_itemtypetodelete.Name = "txt_itemtypetodelete";
-            this.txt_itemtypetodelete.Size = new System.Drawing.Size(154, 27);
+            this.txt_itemtypetodelete.Size = new System.Drawing.Size(135, 23);
             this.txt_itemtypetodelete.TabIndex = 23;
             // 
             // btn_searchfordelete
             // 
-            this.btn_searchfordelete.Location = new System.Drawing.Point(689, 166);
+            this.btn_searchfordelete.Location = new System.Drawing.Point(603, 124);
+            this.btn_searchfordelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_searchfordelete.Name = "btn_searchfordelete";
-            this.btn_searchfordelete.Size = new System.Drawing.Size(94, 29);
+            this.btn_searchfordelete.Size = new System.Drawing.Size(82, 22);
             this.btn_searchfordelete.TabIndex = 21;
             this.btn_searchfordelete.Text = "Search";
             this.btn_searchfordelete.UseVisualStyleBackColor = true;
@@ -301,9 +313,10 @@
             // 
             // btn_deleteItem
             // 
-            this.btn_deleteItem.Location = new System.Drawing.Point(528, 335);
+            this.btn_deleteItem.Location = new System.Drawing.Point(462, 251);
+            this.btn_deleteItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_deleteItem.Name = "btn_deleteItem";
-            this.btn_deleteItem.Size = new System.Drawing.Size(94, 29);
+            this.btn_deleteItem.Size = new System.Drawing.Size(82, 22);
             this.btn_deleteItem.TabIndex = 22;
             this.btn_deleteItem.Text = "Delete";
             this.btn_deleteItem.UseVisualStyleBackColor = true;
@@ -312,51 +325,54 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(421, 265);
+            this.label7.Location = new System.Drawing.Point(368, 199);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 20);
+            this.label7.Size = new System.Drawing.Size(33, 15);
             this.label7.TabIndex = 20;
             this.label7.Text = "Price";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(422, 222);
+            this.label8.Location = new System.Drawing.Point(369, 166);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 20);
+            this.label8.Size = new System.Drawing.Size(31, 15);
             this.label8.TabIndex = 19;
             this.label8.Text = "Type";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(237, 164);
+            this.label9.Location = new System.Drawing.Point(207, 123);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(225, 20);
+            this.label9.Size = new System.Drawing.Size(178, 15);
             this.label9.TabIndex = 18;
             this.label9.Text = "Please input dish name to delete";
             // 
             // txt_itempricetodelete
             // 
             this.txt_itempricetodelete.Enabled = false;
-            this.txt_itempricetodelete.Location = new System.Drawing.Point(482, 258);
+            this.txt_itempricetodelete.Location = new System.Drawing.Point(422, 194);
+            this.txt_itempricetodelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_itempricetodelete.Name = "txt_itempricetodelete";
-            this.txt_itempricetodelete.Size = new System.Drawing.Size(151, 27);
+            this.txt_itempricetodelete.Size = new System.Drawing.Size(133, 23);
             this.txt_itempricetodelete.TabIndex = 17;
             // 
             // txt_itemnametodelete
             // 
-            this.txt_itemnametodelete.Location = new System.Drawing.Point(482, 164);
+            this.txt_itemnametodelete.Location = new System.Drawing.Point(422, 123);
+            this.txt_itemnametodelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_itemnametodelete.Name = "txt_itemnametodelete";
-            this.txt_itemnametodelete.Size = new System.Drawing.Size(151, 27);
+            this.txt_itemnametodelete.Size = new System.Drawing.Size(133, 23);
             this.txt_itemnametodelete.TabIndex = 16;
             // 
             // Admin_GUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 671);
+            this.ClientSize = new System.Drawing.Size(1199, 503);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Admin_GUI";
             this.Text = "Admin_GUI";
             this.Load += new System.EventHandler(this.Admin_GUI_Load);
@@ -381,7 +397,6 @@
         private TextBox txt_itemPrice;
         private TextBox txt_itemname;
         private TabPage tabPage2;
-        private ComboBox cmb_itemtype;
         private Button btn_add;
         private Label label3;
         private Label label2;
@@ -405,5 +420,7 @@
         private Label label9;
         private TextBox txt_itempricetodelete;
         private TextBox txt_itemnametodelete;
+        private TextBox txt_itemtype;
+        //  private TextBox txt_itemtype;
     }
 }

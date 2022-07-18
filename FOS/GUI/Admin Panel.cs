@@ -32,14 +32,17 @@ namespace FOS.GUI
         {
             try
             {
-                if (!(txt_itemname.Text == "" || txt_itemPrice.Text == "" || cmb_itemtype.Text == ""))
+                if (!(txt_itemname.Text == "" || txt_itemPrice.Text == "" || txt_itemtype.Text == ""))
                 {
                     _additemDTO.Name = txt_itemname.Text;
                     _additemDTO.Price = txt_itemPrice.Text;
-                    _additemDTO.Type = cmb_itemtype.Text;
+                    _additemDTO.Type = txt_itemtype.Text;
                     if (_modratorBL.addItemin_BL(_additemDTO))
                     {
-                        MessageBox.Show("Done", "Done", MessageBoxButtons.OK);
+                        MessageBox.Show("Your Item is Successfully added!", "Notify!", MessageBoxButtons.OK);
+                        txt_itemname.Text = "";
+                        txt_itemPrice.Text = "";
+                        txt_itemtype.Text = "";
                     }
 
                 }
@@ -64,7 +67,7 @@ namespace FOS.GUI
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("No Items Available" + ex.Message);
+                MessageBox.Show("No Orders are Available Due to " + ex.Message);
             }
         }
 
@@ -79,11 +82,11 @@ namespace FOS.GUI
                 try
                 {
                     _modratorBL.updateiteminBL(itemDTO);
-                    MessageBox.Show("Updated", "Message", MessageBoxButtons.OK);
+                    MessageBox.Show("Your Items are updated Successfully", "Notify!", MessageBoxButtons.OK);
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Record not update due to exception");
+                    MessageBox.Show("Record not update due to "+ ex.Message);
                 }
             }
         }
@@ -102,14 +105,10 @@ namespace FOS.GUI
                         txt_updateprice.Text = _additemDTO.Price;
                         
                     }
-                    else
-                    {
-                        MessageBox.Show("Record not found");
-                    }
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Record not found due to exception");
+                    MessageBox.Show("Record not found due to "+ex.Message);
                 }
 
             }
@@ -129,14 +128,11 @@ namespace FOS.GUI
                         txt_itempricetodelete.Text = _additemDTO.Price;
 
                     }
-                    else
-                    {
-                        MessageBox.Show("Record not found");
-                    }
+          
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Record not found due to exception");
+                    MessageBox.Show("Record not found due to "+ex.Message);
                 }
 
             }
@@ -151,13 +147,15 @@ namespace FOS.GUI
                 try
                 {
                     _modratorBL.deleteiteminBL(itemDTO);
-                    MessageBox.Show("Deleted", "Info", MessageBoxButtons.OK);
+                    MessageBox.Show("Your "+itemDTO.Name+" is Successfully Deleted!", "Info", MessageBoxButtons.OK);
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Record not update due to exception");
+                    MessageBox.Show("Record not update due to "+ex.Message);
                 }
             }
         }
+
+       
     }
 }
