@@ -39,16 +39,28 @@
             this.txt_itemname = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gdv_orderlist = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comb_updateitems = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_updateitems = new System.Windows.Forms.TextBox();
+            this.txt_updateitem = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_orderlist)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(1, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -66,7 +78,7 @@
             this.tabPage1.Controls.Add(this.txt_itemname);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1426, 634);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Item";
@@ -140,7 +152,7 @@
             this.tabPage2.Controls.Add(this.gdv_orderlist);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1426, 634);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "View orders";
@@ -156,6 +168,94 @@
             this.gdv_orderlist.Size = new System.Drawing.Size(1419, 339);
             this.gdv_orderlist.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.comb_updateitems);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.txt_updateitems);
+            this.tabPage3.Controls.Add(this.txt_updateitem);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1426, 634);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Update Items";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1426, 634);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Delete items";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(473, 292);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(319, 221);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Item Price";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(319, 179);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 20);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Item Type";
+            // 
+            // comb_updateitems
+            // 
+            this.comb_updateitems.FormattingEnabled = true;
+            this.comb_updateitems.Items.AddRange(new object[] {
+            "Desi",
+            "Italian",
+            "Arabic"});
+            this.comb_updateitems.Location = new System.Drawing.Point(428, 171);
+            this.comb_updateitems.Name = "comb_updateitems";
+            this.comb_updateitems.Size = new System.Drawing.Size(151, 28);
+            this.comb_updateitems.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(319, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 20);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Item Name";
+            // 
+            // txt_updateitems
+            // 
+            this.txt_updateitems.Location = new System.Drawing.Point(428, 215);
+            this.txt_updateitems.Name = "txt_updateitems";
+            this.txt_updateitems.Size = new System.Drawing.Size(151, 27);
+            this.txt_updateitems.TabIndex = 9;
+            // 
+            // txt_updateitem
+            // 
+            this.txt_updateitem.Location = new System.Drawing.Point(428, 121);
+            this.txt_updateitem.Name = "txt_updateitem";
+            this.txt_updateitem.Size = new System.Drawing.Size(151, 27);
+            this.txt_updateitem.TabIndex = 8;
+            // 
             // Admin_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -170,6 +270,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdv_orderlist)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +290,14 @@
         private Label label2;
 
         private DataGridView gdv_orderlist;
+        private TabPage tabPage3;
+        private Button button2;
+        private Label label4;
+        private Label label5;
+        private ComboBox comb_updateitems;
+        private Label label6;
+        private TextBox txt_updateitems;
+        private TextBox txt_updateitem;
+        private TabPage tabPage4;
     }
 }
