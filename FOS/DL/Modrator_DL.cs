@@ -117,5 +117,47 @@ namespace FOS.DL
                 _dbCon.Con.Close();
             }
         }
+        public void delectitemINDL(AddItem_DTO del_dto)
+        {
+            try
+            {
+                _dbCon.Con.Open();
+                string queryString = "Delete FROM MenuItem WHERE Name=@name;";
+                SqlCommand com = new SqlCommand(queryString, _dbCon.Con);
+                com.Parameters.AddWithValue("@name", del_dto.Name);
+                int noOfRowsAffected = com.ExecuteNonQuery();
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                _dbCon.Con.Close();
+            }
+        }
+        public void updateitemINDL(AddItem_DTO updt_dto)
+        {
+            try
+            {
+                _dbCon.Con.Open();
+                string queryString = "UPDATE MenuItem SET Name=@name, TypeName=@typename,Price=@price;";
+                SqlCommand com = new SqlCommand(queryString, _dbCon.Con);
+                com.Parameters.AddWithValue("@name", updt_dto.Name);
+                com.Parameters.AddWithValue("@typename", updt_dto.Type);
+                com.Parameters.AddWithValue("@price", updt_dto.Price);
+                int noOfRowsAffected = com.ExecuteNonQuery();
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                _dbCon.Con.Close();
+            }
+        }
     }
 }

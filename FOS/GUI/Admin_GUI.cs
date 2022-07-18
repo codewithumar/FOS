@@ -21,11 +21,11 @@ namespace FOS.GUI
         public Admin_GUI(User_DTO ud)
         {
             InitializeComponent();
-            
+
             _additemDTO = new AddItem_DTO();
             _modratorBL = new Modrator_BL();
-            userDTO = ud;   
-            
+            userDTO = ud;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,7 +47,8 @@ namespace FOS.GUI
                 {
                     MessageBox.Show("Please Input all feilds", "Error", MessageBoxButtons.OK);
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Dish With Same name already Exsists", "Error", MessageBoxButtons.OK);
             }
@@ -64,6 +65,23 @@ namespace FOS.GUI
             catch (SqlException ex)
             {
                 MessageBox.Show("No Items Available" + ex.Message);
+            }
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            if (!(txt_updtitemname.Text == ""))
+            {
+                try
+                {
+
+
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Record not found due to exception");
+                }
             }
         }
     }

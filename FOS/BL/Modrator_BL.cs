@@ -33,5 +33,13 @@ namespace FOS.BL
         {
             return _modratorDL.addtotalbillInDB(gob_dto);
         }
+        public void updateiteminBL(AddItem_DTO updt_dto)
+        {
+            _modratorDL.updateitemINDL(updt_dto);
+        }
+        public void deleteiteminBL(AddItem_DTO del_dto)
+        {
+            _modratorDL.delectitemINDL(del_dto);
+        }
     }
 }
