@@ -59,7 +59,7 @@ namespace FOS.GUI
 
         private void Admin_GUI_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(1400, 600);
+            this.Size = new Size(914,539);
             try
             {
 
