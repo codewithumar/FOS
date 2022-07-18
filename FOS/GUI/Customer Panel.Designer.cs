@@ -65,7 +65,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tabPage1.BackgroundImage = global::FOS.Properties.Resources.OIP;
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -87,16 +88,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label3.Font = new System.Drawing.Font("Segoe UI Black", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(419, 9);
+            this.label3.Location = new System.Drawing.Point(399, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 50);
+            this.label3.Size = new System.Drawing.Size(262, 50);
             this.label3.TabIndex = 8;
-            this.label3.Text = "ORDER";
+            this.label3.Text = "YOUR ORDER";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(6, 9);
             this.label2.Name = "label2";
@@ -107,17 +110,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(424, 338);
+            this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(399, 419);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.Size = new System.Drawing.Size(112, 30);
             this.label1.TabIndex = 7;
             this.label1.Text = "Total Bill:";
             // 
             // txt_totalBill
             // 
             this.txt_totalBill.Enabled = false;
-            this.txt_totalBill.Location = new System.Drawing.Point(505, 336);
+            this.txt_totalBill.Location = new System.Drawing.Point(517, 419);
             this.txt_totalBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_totalBill.Name = "txt_totalBill";
             this.txt_totalBill.Size = new System.Drawing.Size(178, 23);
@@ -125,18 +129,20 @@
             // 
             // btn_delete
             // 
+            this.btn_delete.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_delete.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_delete.Location = new System.Drawing.Point(799, 136);
+            this.btn_delete.Location = new System.Drawing.Point(779, 169);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(82, 38);
             this.btn_delete.TabIndex = 5;
             this.btn_delete.Text = "Delete";
-            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.UseVisualStyleBackColor = false;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_Calculatebill
             // 
+            this.btn_Calculatebill.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_Calculatebill.Font = new System.Drawing.Font("Segoe UI Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Calculatebill.Location = new System.Drawing.Point(701, 419);
             this.btn_Calculatebill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -144,19 +150,20 @@
             this.btn_Calculatebill.Size = new System.Drawing.Size(180, 50);
             this.btn_Calculatebill.TabIndex = 4;
             this.btn_Calculatebill.Text = "Place Order";
-            this.btn_Calculatebill.UseVisualStyleBackColor = true;
+            this.btn_Calculatebill.UseVisualStyleBackColor = false;
             this.btn_Calculatebill.Click += new System.EventHandler(this.btn_Calculatebill_Click);
             // 
             // btn_addtoorder
             // 
+            this.btn_addtoorder.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_addtoorder.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_addtoorder.Location = new System.Drawing.Point(799, 74);
+            this.btn_addtoorder.Location = new System.Drawing.Point(399, 61);
             this.btn_addtoorder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_addtoorder.Name = "btn_addtoorder";
             this.btn_addtoorder.Size = new System.Drawing.Size(82, 35);
             this.btn_addtoorder.TabIndex = 3;
             this.btn_addtoorder.Text = "Add";
-            this.btn_addtoorder.UseVisualStyleBackColor = true;
+            this.btn_addtoorder.UseVisualStyleBackColor = false;
             this.btn_addtoorder.Click += new System.EventHandler(this.btn_addtoorder_Click);
             // 
             // gdv_orderitems_temp
@@ -168,7 +175,7 @@
             this.gdv_orderitems_temp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
             this.Column6});
-            this.gdv_orderitems_temp.Location = new System.Drawing.Point(419, 74);
+            this.gdv_orderitems_temp.Location = new System.Drawing.Point(399, 169);
             this.gdv_orderitems_temp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gdv_orderitems_temp.Name = "gdv_orderitems_temp";
             this.gdv_orderitems_temp.ReadOnly = true;
@@ -196,8 +203,9 @@
             // lbl_welcome
             // 
             this.lbl_welcome.AutoSize = true;
+            this.lbl_welcome.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.lbl_welcome.Font = new System.Drawing.Font("Segoe UI Black", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_welcome.Location = new System.Drawing.Point(587, 12);
+            this.lbl_welcome.Location = new System.Drawing.Point(356, 9);
             this.lbl_welcome.Name = "lbl_welcome";
             this.lbl_welcome.Size = new System.Drawing.Size(206, 47);
             this.lbl_welcome.TabIndex = 1;
@@ -223,6 +231,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::FOS.Properties.Resources.OIP__1_;
             this.tabPage2.Controls.Add(this.gdv_history);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

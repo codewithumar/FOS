@@ -121,6 +121,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.BackgroundImage = global::FOS.Properties.Resources.OIP;
             this.tabPage1.Controls.Add(this.txt_username);
             this.tabPage1.Controls.Add(this.txt_password);
             this.tabPage1.Controls.Add(this.label2);
@@ -138,6 +139,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.BackgroundImage = global::FOS.Properties.Resources.OIP__3_;
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
@@ -165,20 +167,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(100, 172);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(42, 158);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 17);
+            this.label5.Size = new System.Drawing.Size(127, 32);
             this.label5.TabIndex = 4;
             this.label5.Text = "Password";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(100, 119);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(38, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.Size = new System.Drawing.Size(131, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "Username";
             // 
@@ -201,11 +203,11 @@
             // 
             // btn_signup
             // 
-            this.btn_signup.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_signup.Location = new System.Drawing.Point(278, 203);
+            this.btn_signup.Font = new System.Drawing.Font("Segoe UI Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_signup.Location = new System.Drawing.Point(262, 206);
             this.btn_signup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_signup.Name = "btn_signup";
-            this.btn_signup.Size = new System.Drawing.Size(91, 32);
+            this.btn_signup.Size = new System.Drawing.Size(128, 49);
             this.btn_signup.TabIndex = 0;
             this.btn_signup.Text = "Sign Up";
             this.btn_signup.UseVisualStyleBackColor = true;

@@ -83,6 +83,9 @@ namespace FOS.GUI
                 {
                     _modratorBL.updateiteminBL(itemDTO);
                     MessageBox.Show("Your Items are updated Successfully", "Notify!", MessageBoxButtons.OK);
+                    txt_updtitemname.Clear();
+                    txt_updateitemtype.Clear();
+                    txt_updateprice.Clear();
                 }
                 catch (SqlException ex)
                 {
@@ -104,6 +107,10 @@ namespace FOS.GUI
                         txt_updateitemtype.Text = _additemDTO.Type;
                         txt_updateprice.Text = _additemDTO.Price;
                         
+                    }
+                    else
+                    {
+                        MessageBox.Show(txt_updtitemname.Text + " is not in Menu.", "Warning!!", MessageBoxButtons.OK);
                     }
                 }
                 catch (SqlException ex)
@@ -128,7 +135,11 @@ namespace FOS.GUI
                         txt_itempricetodelete.Text = _additemDTO.Price;
 
                     }
-          
+                    else
+                    {
+                        MessageBox.Show(txt_itemnametodelete.Text + " is not in Menu.", "Warning!!", MessageBoxButtons.OK);
+                    }
+
                 }
                 catch (SqlException ex)
                 {
@@ -148,6 +159,9 @@ namespace FOS.GUI
                 {
                     _modratorBL.deleteiteminBL(itemDTO);
                     MessageBox.Show("Your "+itemDTO.Name+" is Successfully Deleted!", "Info", MessageBoxButtons.OK);
+                    txt_itemnametodelete.Clear();
+                    txt_itemtypetodelete.Clear();
+                    txt_itempricetodelete.Clear();
                 }
                 catch (SqlException ex)
                 {
@@ -164,6 +178,25 @@ namespace FOS.GUI
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txt_itemnametodelete.Clear();
+            txt_itemtypetodelete.Clear();
+            txt_itempricetodelete.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txt_updtitemname.Clear();
+            txt_updateitemtype.Clear();
+            txt_updateprice.Clear();
         }
     }
 }
