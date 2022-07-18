@@ -74,7 +74,7 @@ namespace FOS.GUI
             {
                 try
                 {
-
+                    txt_itemname.Text = "";
 
 
                 }
