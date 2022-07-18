@@ -10,7 +10,7 @@ namespace FOS.GUI
         string _orderItemnames;
         User_DTO user;
         GenrateOrderBill_DTO genrateorderbill;
-        AddItem_DTO additem;
+        Item_DTO additem;
         private int _totalPrice=0;
         public Customer_GUI(User_DTO ud)
         {

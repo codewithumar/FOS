@@ -17,7 +17,7 @@ namespace FOS.BL
         {
             _modratorDL = new Modrator_DL();
         }
-        public bool addItemin_BL(AddItem_DTO additem_dto)
+        public bool addItemin_BL(Item_DTO additem_dto)
         {
             return (_modratorDL.addFoodin_DB(additem_dto));
         }
@@ -33,13 +33,17 @@ namespace FOS.BL
         {
             return _modratorDL.addtotalbillInDB(gob_dto);
         }
-        public void updateiteminBL(AddItem_DTO updt_dto)
+        public void updateiteminBL(Item_DTO updt_dto)
         {
             _modratorDL.updateitemINDL(updt_dto);
         }
-        public void deleteiteminBL(AddItem_DTO del_dto)
+        public void deleteiteminBL(Item_DTO del_dto)
         {
             _modratorDL.delectitemINDL(del_dto);
+        }
+        public Item_DTO checkItem(string text)
+        {
+            return _modratorDL.checkItem(text);
         }
     }
 }

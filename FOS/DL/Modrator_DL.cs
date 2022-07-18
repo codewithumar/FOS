@@ -18,7 +18,7 @@ namespace FOS.DL
             _dbCon = new DBConnection();
         }
 
-        public bool addFoodin_DB(AddItem_DTO aditemDTO)
+        public bool addFoodin_DB(Item_DTO aditemDTO)
         {
             try
             {
@@ -117,7 +117,7 @@ namespace FOS.DL
                 _dbCon.Con.Close();
             }
         }
-        public void delectitemINDL(AddItem_DTO del_dto)
+        public void delectitemINDL(Item_DTO del_dto)
         {
             try
             {
@@ -137,12 +137,12 @@ namespace FOS.DL
                 _dbCon.Con.Close();
             }
         }
-        public void updateitemINDL(AddItem_DTO updt_dto)
+        public void updateitemINDL(Item_DTO updt_dto)
         {
             try
             {
                 _dbCon.Con.Open();
-                string queryString = "UPDATE MenuItem SET Name=@name, TypeName=@typename,Price=@price;";
+                string queryString = "UPDATE MenuItem SET Name=@name, TypeName=@typename,Price=@price WHERE Name = @name;";
                 SqlCommand com = new SqlCommand(queryString, _dbCon.Con);
                 com.Parameters.AddWithValue("@name", updt_dto.Name);
                 com.Parameters.AddWithValue("@typename", updt_dto.Type);
@@ -152,6 +152,37 @@ namespace FOS.DL
             }
             catch (SqlException ex)
             {
+                throw ex;
+            }
+            finally
+            {
+                _dbCon.Con.Close();
+            }
+        }
+
+        internal Item_DTO checkItem(string text)
+        {
+            Item_DTO retDTO = new Item_DTO();
+            try
+            {
+                _dbCon.Con.Open();
+                string queryString = "SELECT * FROM MenuItem WHERE Name = @Name;";
+
+                SqlCommand com = new SqlCommand(queryString, _dbCon.Con);
+                com.Parameters.AddWithValue("@Name", text);
+                SqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    retDTO.Name = reader["Name"].ToString();
+                    retDTO.Type = reader["TypeName"].ToString();
+                    retDTO.Price = reader["Price"].ToString();
+                    return retDTO;
+                }
+                return null;
+            }
+            catch (SqlException ex)
+            {
+
                 throw ex;
             }
             finally

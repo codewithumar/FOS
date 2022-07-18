@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace FOS.DTO
 {
-    class AddItem_DTO
+    class Item_DTO
     {
         private string _name;
         private string _price;
         private string _type;
 
-        public AddItem_DTO()
+        public Item_DTO()
         {
         }
 

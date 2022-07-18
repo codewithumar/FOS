@@ -16,13 +16,13 @@ namespace FOS.GUI
     public partial class Admin_GUI : Form
     {
         Modrator_BL _modratorBL;
-        AddItem_DTO _additemDTO;
+        Item_DTO _additemDTO;
         User_DTO userDTO;
         public Admin_GUI(User_DTO ud)
         {
             InitializeComponent();
 
-            _additemDTO = new AddItem_DTO();
+            _additemDTO = new Item_DTO();
             _modratorBL = new Modrator_BL();
             userDTO = ud;
 
@@ -70,18 +70,48 @@ namespace FOS.GUI
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+            Item_DTO itemDTO = new Item_DTO();
+            if (!(txt_updtitemname.Text == ""))
+            {
+                itemDTO.Name=txt_updtitemname.Text.ToString();
+                itemDTO.Type=txt_updateitemtype.Text.ToString();
+                itemDTO.Price = txt_updateprice.Text.ToString();
+                try
+                {
+                    _modratorBL.updateiteminBL(itemDTO);
+                    MessageBox.Show("Updated", "Message", MessageBoxButtons.OK);
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Record not update due to exception");
+                }
+            }
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
             if (!(txt_updtitemname.Text == ""))
             {
                 try
                 {
-                   
-
-
+                    _additemDTO = _modratorBL.checkItem(txt_updtitemname.Text);
+                    if (_additemDTO != null)
+                    {
+                        txt_updtitemname.Text=_additemDTO.Name;
+                        txt_updateitemtype.Text = _additemDTO.Type;
+                        txt_updateprice.Text = _additemDTO.Price;
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Record not found");
+                    }
                 }
                 catch (SqlException ex)
                 {
                     MessageBox.Show("Record not found due to exception");
                 }
+
             }
         }
     }
